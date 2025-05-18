@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_17f3f17fcfd94c6f6f84b8a42cc2c281 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_17f3f17fcfd94c6f6f84b8a42cc2c281" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_17f3f17fcfd94c6f6f84b8a42cc2c281 = L.map(
+                "map_17f3f17fcfd94c6f6f84b8a42cc2c281",
+                {
+                    center: [52.208074, 20.86491],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_482b79a45bdd0e7902820008527aaffe = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_482b79a45bdd0e7902820008527aaffe.addTo(map_17f3f17fcfd94c6f6f84b8a42cc2c281);
+        
+    
+            var poly_line_b074c771fda00c0dece7c7b501b71a6e = L.polyline(
+                [[52.208074, 20.86491], [52.206779, 20.869343]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_17f3f17fcfd94c6f6f84b8a42cc2c281);
+        
+    
+            poly_line_b074c771fda00c0dece7c7b501b71a6e.bindTooltip(
+                `<div>
+                     WALK: Origin → Leszczyńskiego
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f08a66e1a49a16df5f7c1d946e2ef402 = L.polyline(
+                [[52.206779, 20.869343], [52.220382, 20.918161]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_17f3f17fcfd94c6f6f84b8a42cc2c281);
+        
+    
+            poly_line_f08a66e1a49a16df5f7c1d946e2ef402.bindTooltip(
+                `<div>
+                     BUS: Leszczyńskiego → Ciepłownia Wola
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_82df6156b86f68dc3f614cd7b63dd6df = L.polyline(
+                [[52.220382, 20.918161], [52.220913, 20.918473]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_17f3f17fcfd94c6f6f84b8a42cc2c281);
+        
+    
+            poly_line_82df6156b86f68dc3f614cd7b63dd6df.bindTooltip(
+                `<div>
+                     WALK: Ciepłownia Wola → Ciepłownia Wola
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c0e9a069616199e7cc0219dfe14b57d8 = L.polyline(
+                [[52.220913, 20.918473], [52.220031, 21.0115]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_17f3f17fcfd94c6f6f84b8a42cc2c281);
+        
+    
+            poly_line_c0e9a069616199e7cc0219dfe14b57d8.bindTooltip(
+                `<div>
+                     TRAM: Ciepłownia Wola → Pl. Politechniki
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_1c73d6d5d2450a469db5bdbb59150ba3 = L.polyline(
+                [[52.220031, 21.0115], [52.219916, 21.011682]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_17f3f17fcfd94c6f6f84b8a42cc2c281);
+        
+    
+            poly_line_1c73d6d5d2450a469db5bdbb59150ba3.bindTooltip(
+                `<div>
+                     WALK: Pl. Politechniki → Destination
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

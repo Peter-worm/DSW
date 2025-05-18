@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e4614d55cc0dea484b78f295209ec7e6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e4614d55cc0dea484b78f295209ec7e6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e4614d55cc0dea484b78f295209ec7e6 = L.map(
+                "map_e4614d55cc0dea484b78f295209ec7e6",
+                {
+                    center: [52.208074, 20.86491],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_231fbb908760c5ce655ead9365cc4da0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_231fbb908760c5ce655ead9365cc4da0.addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+            var poly_line_111b29e57883c7184d5e8c6d163979eb = L.polyline(
+                [[52.208074, 20.86491], [52.206779, 20.869343]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+            poly_line_111b29e57883c7184d5e8c6d163979eb.bindTooltip(
+                `<div>
+                     WALK: Origin → Leszczyńskiego
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b478a6d36a53f39d448bd5c3629a9270 = L.polyline(
+                [[52.206779, 20.869343], [52.220382, 20.918161]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+            poly_line_b478a6d36a53f39d448bd5c3629a9270.bindTooltip(
+                `<div>
+                     BUS: Leszczyńskiego → Ciepłownia Wola
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3b131d0babb54f2d201d9ba5c2744d38 = L.polyline(
+                [[52.220382, 20.918161], [52.220913, 20.918473]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+            poly_line_3b131d0babb54f2d201d9ba5c2744d38.bindTooltip(
+                `<div>
+                     WALK: Ciepłownia Wola → Ciepłownia Wola
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7d48c382b08026a61ec1510a96cdd404 = L.polyline(
+                [[52.220913, 20.918473], [52.220031, 21.0115]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+            poly_line_7d48c382b08026a61ec1510a96cdd404.bindTooltip(
+                `<div>
+                     TRAM: Ciepłownia Wola → Pl. Politechniki
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d82c5d2bf80a887c2acf9e91ba3ad110 = L.polyline(
+                [[52.220031, 21.0115], [52.219916, 21.011682]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+            poly_line_d82c5d2bf80a887c2acf9e91ba3ad110.bindTooltip(
+                `<div>
+                     WALK: Pl. Politechniki → Destination
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5de4812c31d0758a325b3ca2a7b57420 = L.polyline(
+                [[52.200323, 20.874611], [52.205197, 20.985098]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+            poly_line_5de4812c31d0758a325b3ca2a7b57420.bindTooltip(
+                `<div>
+                     EkoPark - Warszawska → Żwirki i Wigury - Księcia Trojdena (realne)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e04973d3c9d265bf61a3bebef75c43ff = L.circleMarker(
+                [52.200323, 20.874611],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+        var popup_ed35f57ecb449ab49ba5c0e78b67a9b6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34d8451e77ddfde16788452c6943a28d = $(`<div id="html_34d8451e77ddfde16788452c6943a28d" style="width: 100.0%; height: 100.0%;">EkoPark - Warszawska (realne)</div>`)[0];
+                popup_ed35f57ecb449ab49ba5c0e78b67a9b6.setContent(html_34d8451e77ddfde16788452c6943a28d);
+            
+        
+
+        circle_marker_e04973d3c9d265bf61a3bebef75c43ff.bindPopup(popup_ed35f57ecb449ab49ba5c0e78b67a9b6)
+        ;
+
+        
+    
+    
+            var poly_line_559c034dcd6a8e132329e27327ed6caa = L.polyline(
+                [[52.205197, 20.985098], [52.210833, 21.007851]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+            poly_line_559c034dcd6a8e132329e27327ed6caa.bindTooltip(
+                `<div>
+                     Żwirki i Wigury - Księcia Trojdena → al. Niepodległości - Batorego (realne)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_41eb904f5e81317d264c77b1e9a37ed4 = L.circleMarker(
+                [52.205197, 20.985098],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+        var popup_31e86261c342c98275eeb93a36317e1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_233d18e294e268e025494548519b37c8 = $(`<div id="html_233d18e294e268e025494548519b37c8" style="width: 100.0%; height: 100.0%;">Żwirki i Wigury - Księcia Trojdena (realne)</div>`)[0];
+                popup_31e86261c342c98275eeb93a36317e1e.setContent(html_233d18e294e268e025494548519b37c8);
+            
+        
+
+        circle_marker_41eb904f5e81317d264c77b1e9a37ed4.bindPopup(popup_31e86261c342c98275eeb93a36317e1e)
+        ;
+
+        
+    
+    
+            var circle_marker_2b496ed7080fd96c99100c3ac1cb8a5b = L.circleMarker(
+                [52.210833, 21.007851],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e4614d55cc0dea484b78f295209ec7e6);
+        
+    
+        var popup_6175c3550e87989018f4e3da02f06d19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f6b191f54ff9811051fc8938a3238c3 = $(`<div id="html_8f6b191f54ff9811051fc8938a3238c3" style="width: 100.0%; height: 100.0%;">al. Niepodległości - Batorego</div>`)[0];
+                popup_6175c3550e87989018f4e3da02f06d19.setContent(html_8f6b191f54ff9811051fc8938a3238c3);
+            
+        
+
+        circle_marker_2b496ed7080fd96c99100c3ac1cb8a5b.bindPopup(popup_6175c3550e87989018f4e3da02f06d19)
+        ;
+
+        
+    
+</script>
+</html>
