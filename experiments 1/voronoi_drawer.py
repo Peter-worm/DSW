@@ -82,7 +82,7 @@ def voronoi_finite_polygons_2d(vor, radius=None):
 
     return new_regions, np.array(new_vertices)
 
-def draw_voronoi_heatmap_on_warsaw_on_subplot(points, points_to_colors, ax, name = "Voronoi Heatmap",save = True,save_path="plots/",station_legend=None):
+def draw_voronoi_heatmap_on_warsaw_on_subplot(points, points_to_colors, ax, name = "Voronoi Heatmap",save = True,save_path="plots/",station_legend=None,zoom =1,alpha = 0.4):
     transformer = Transformer.from_crs("EPSG:4326", "EPSG:2180", always_xy=True)
     coords_deg = np.array(points)
     lngs = coords_deg[:, 1]
@@ -102,8 +102,12 @@ def draw_voronoi_heatmap_on_warsaw_on_subplot(points, points_to_colors, ax, name
 
     # Set the CRS for plotting (EPSG:2180)
     ax.set_aspect('equal')
-    ax.set_xlim(xs.min() - 1000, xs.max() + 1000)
-    ax.set_ylim(ys.min() - 1000, ys.max() + 1000)
+    x_center = (xs.max() + xs.min()) / 2
+    y_center = (ys.max() + ys.min()) / 2
+    x_range = (xs.max() - xs.min()) / zoom / 2
+    y_range = (ys.max() - ys.min()) / zoom / 2
+    ax.set_xlim(x_center - x_range, x_center + x_range)
+    ax.set_ylim(y_center - y_range, y_center + y_range)
 
     # Add basemap (Warsaw area, EPSG:2180)
     ctx.add_basemap(ax, crs="EPSG:2180", source=ctx.providers.OpenStreetMap.Mapnik)
@@ -116,7 +120,7 @@ def draw_voronoi_heatmap_on_warsaw_on_subplot(points, points_to_colors, ax, name
         #     color = 'black'
         # else:
         color = points_to_colors[location]  # Or use your color logic
-        ax.fill(*zip(*polygon), color=color, alpha=0.4)
+        ax.fill(*zip(*polygon), color=color, alpha=alpha)
 
     voronoi_plot_2d(vor, ax=ax, show_vertices=False, line_colors='black', line_width=1, line_alpha=0.6, point_size=10)
 
@@ -138,8 +142,8 @@ def draw_voronoi_heatmap_on_warsaw_on_subplot(points, points_to_colors, ax, name
         plt.savefig(f"{save_path}{name}.png")
     plt.show()
 
-def draw_voronoi_heatmap_on_warsaw(points, points_to_colors, name = "Voronoi Heatmap",save = True,save_path="plots/",station_legend=None):
+def draw_voronoi_heatmap_on_warsaw(points, points_to_colors, name = "Voronoi Heatmap",save = True,save_path="plots/",station_legend=None,zoom=1,alpha = 0.4):
         # Plot Voronoi diagram (no station names, just map)
     fig, ax = plt.subplots(figsize=(12, 12))
-    draw_voronoi_heatmap_on_warsaw_on_subplot(points, points_to_colors, ax, name=name,station_legend=station_legend,save=save,save_path=save_path)
+    draw_voronoi_heatmap_on_warsaw_on_subplot(points, points_to_colors, ax, name=name,station_legend=station_legend,save=save,save_path=save_path,zoom =zoom,alpha=alpha)
    
